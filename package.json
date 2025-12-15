@@ -1,0 +1,33 @@
+{
+  "name": "p5-game",
+  "version": "1.0.0",
+  "description": "A game framework for p5 in javascript",
+  "keywords": [
+    "game",
+    "framework",
+    "p5"
+  ],
+  "homepage": "https://github.com/Vandmand/p5game#readme",
+  "bugs": {
+    "url": "https://github.com/Vandmand/p5game/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vandmand/p5game.git"
+  },
+  "license": "ISC",
+  "author": "Vandmand",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "build": "npx tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@types/p5": "^1.7.7",
+    "p5": "^2.1.1"
+  }
+}
