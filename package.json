@@ -17,17 +17,41 @@
   },
   "license": "ISC",
   "author": "Vandmand",
-  "type": "commonjs",
-  "main": "index.js",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "test",
-    "build": "npx tsc"
+    "test": "jest",
+    "build": "npx tsc",
+    "link": "npm link && cd ./test/ && npm link p5-game",
+    "unlink": "cd ./test/ && npm unlink p5-game",
+    "link-remove": "npm rm -g p5-game",
+    "link-update": "npm run unlink && npm run link-remove && npm run build && npm run link",
+    "l": "npm run link",
+    "ul": "npm run unlink",
+    "lr": "npm run link-remove",
+    "lu": "npm run link-update"
   },
   "devDependencies": {
-    "typescript": "^5.9.3"
+    "@babel/core": "^7.28.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.27.1",
+    "@babel/preset-env": "^7.28.5",
+    "@babel/preset-typescript": "^7.28.5",
+    "@types/jest": "^30.0.0",
+    "@types/p5": "^1.7.7",
+    "babel-jest": "^30.2.0",
+    "eslint": "^9.39.2",
+    "globals": "^16.5.0",
+    "jest": "^30.2.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.50.0"
   },
   "dependencies": {
-    "@types/p5": "^1.7.7",
+    "@types/node": "^25.0.2",
     "p5": "^2.1.1"
-  }
+  },
+  "files": [
+    "dist/",
+    "readme.md"
+  ]
 }
