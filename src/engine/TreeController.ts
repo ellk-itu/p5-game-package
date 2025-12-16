@@ -1,5 +1,5 @@
-import type Node from "./Node";
-import type { NodeId } from "./Node";
+import Node from "./Node";
+import { NodeId } from "./Node";
 
 export default class TreeController {
   private tree: Map<NodeId, Node>;
